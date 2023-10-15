@@ -7,11 +7,25 @@
 ### Регистрация пользователя
 
 - **Метод**: POST
-- **Маршрут**: /api/register
+- **Маршрут**: /auth/register
 - **Запрос**:
 
 ```json
 {
   "login": "example_user",
   "password": "secure_password"
+}
+
+### Ответ
+```json
+{
+  "message": "Пользователь успешно зарегистрирован",
+  "user": {
+    "login": "example_user",
+    "userName": "example_user",
+    "avatar": "",
+    "about": "",
+    "birthday": "",
+    "token": "unique_token_user",
+  },
 }
