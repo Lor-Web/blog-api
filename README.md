@@ -15,8 +15,10 @@
   "login": "example_user",
   "password": "secure_password"
 }
+```
 
 ### Ответ
+
 ```json
 {
   "message": "Пользователь успешно зарегистрирован",
@@ -29,3 +31,4 @@
     "token": "unique_token_user",
   },
 }
+```
