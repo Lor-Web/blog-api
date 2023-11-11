@@ -1,7 +1,7 @@
 const fs = require('fs');
 const uuid = require('uuid');
 
-function addPost(userToken, titlePost, contentPost, tagsPost, postImage) {
+function addPost(userToken, titlePost = '', contentPost = '', tagsPost = [], postImage = '') {
     const dbFile = 'db.json';
 
     // Проверяем, существует ли пользователь с указанным токеном

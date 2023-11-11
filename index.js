@@ -59,9 +59,9 @@ app.post('/auth/register', (req, res) => {
 
 // Добавление нового поста
 app.post('/blog/posts', (req, res) => {
-    const {title, content, tags} = req.body;
+    const {title, content, tags, image} = req.body;
     const userToken = req.header('Authorization');
-    const result = addPost(userToken, title, content, tags);
+    const result = addPost(userToken, title, content, tags, image);
     res.status(result.status).json({message: result.message, post: result.post, user: result.user});
 })
 
