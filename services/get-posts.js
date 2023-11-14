@@ -6,10 +6,8 @@ function getPosts(page, postsPerPage) {
     const posts = JSON.parse(fs.readFileSync(dbFile, 'utf8'));
     const refreshPosts = posts.map(post => {
         return {
-                ...post.post,
-                user: {
-                    ...getRefreshUser(post.user.token)
-                }
+            post:{ ...post.post},
+            user: {...getRefreshUser(post.user.token)}
         }
     })
 
